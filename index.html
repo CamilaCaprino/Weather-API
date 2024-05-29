@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://unpkg.com/@ionic/core/css/ionic.bundle.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="module" src="https://unpkg.com/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://unpkg.com/@ionic/core/dist/ionic/ionic.js"></script>
+    <title>API Clima</title>
+</head>
+<body onload="onLoad()">
+    <div id="loader" class="loader">Loading...</div>
+    <div id="container">
+        <form id="search-form" onsubmit="searchCity(event)">
+            <ion-searchbar id="city-searchbar" placeholder="Enter city name"></ion-searchbar>
+            <button type="submit" style="display: none;">Search</button> 
+        </form>
+        <div id="location"></div>
+        <div id="description"></div>
+        <div id="temperature"></div>
+        <div class="weather-info">
+            <div>
+                <span class="material-icons">opacity</span>
+                <span id="humidity"></span>
+            </div>
+            <div>
+                <span class="material-icons">air</span>
+                <span id="pressure"></span>
+            </div>
+            <div>
+                <span class="material-icons">calendar_today</span>
+                <span id="date"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="icons-redes">
+        <a aria-label="GitHub" href="https://github.com/CamilaCaprino">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/camilacaprino">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+    </div>
+
+    <ion-alert id="city-alert"></ion-alert>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
